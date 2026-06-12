@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Uma homenagem romântica e responsiva de Igor para Giullie Anne." />
+  <meta name="theme-color" content="#120f1e" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Para a minha Giullie Anne | Igor</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+
+    :root,
+    [data-theme="light"] {
+      --vh: 1vh;
+      --safe-top: env(safe-area-inset-top);
+      --safe-bottom: env(safe-area-inset-bottom);
+
+      --text-xs: clamp(0.72rem, 0.68rem + 0.2vw, 0.84rem);
+      --text-sm: clamp(0.84rem, 0.78rem + 0.25vw, 0.98rem);
+      --text-base: clamp(0.95rem, 0.88rem + 0.3vw, 1.08rem);
+      --text-title: clamp(2.2rem, 1.5rem + 3vw, 4.6rem);
+      --text-hero: clamp(3rem, 2rem + 5.6vw, 6.7rem);
+
+      --space-2: .5rem;
+      --space-3: .75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+
+      --color-text: #fff7fb;
+      --color-text-muted: rgba(255,247,251,.76);
+      --color-text-faint: rgba(255,247,251,.55);
+      --color-primary: #ff6fae;
+      --color-gold: #ffd68f;
+      --radius-full: 999px;
+      --shadow-lg: 0 24px 70px rgba(8, 6, 18, .34);
+      --shadow-md: 0 16px 42px rgba(6, 3, 14, .25);
+      --transition: 220ms cubic-bezier(.16, 1, .3, 1);
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Inter', Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      width: 100%;
+      height: 100%;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      scroll-behavior: smooth;
+      background: #120d1c;
+    }
+
+    body {
+      width: 100%;
+      height: calc(var(--vh) * 100);
+      min-height: 100dvh;
+      margin: 0;
+      overflow: hidden;
+      font-family: var(--font-body);
+      color: var(--color-text);
+      background:
+        radial-gradient(circle at 15% 15%, rgba(255,111,174,.18), transparent 23%),
+        radial-gradient(circle at 85% 22%, rgba(141,124,255,.20), transparent 27%),
+        radial-gradient(circle at 55% 85%, rgba(140,246,255,.11), transparent 25%),
+        linear-gradient(135deg, #120d1c 0%, #1f1230 43%, #120914 100%);
+    }
+
+    img { display: block; max-width: 100%; }
+    button { font: inherit; border: 0; outline: 0; }
+    p {
+      margin: 0;
+      color: var(--color-text-muted);
+      font-size: var(--text-base);
+      line-height: 1.62;
+      max-width: 62ch;
+      text-wrap: pretty;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 600;
+      line-height: .96;
+      text-wrap: balance;
+    }
+
+    .bg-orbs,
+    .floating-hearts,
+    .sparkles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .bg-orbs::before,
+    .bg-orbs::after {
+      content: "";
+      position: absolute;
+      width: 42vw;
+      height: 42vw;
+      border-radius: 50%;
+      filter: blur(18px);
+      opacity: .42;
+      animation: drift 18s ease-in-out infinite alternate;
+    }
+
+    .bg-orbs::before {
+      top: -10vw;
+      left: -8vw;
+      background: radial-gradient(circle, rgba(255,111,174,.36), transparent 68%);
+    }
+
+    .bg-orbs::after {
+      right: -10vw;
+      bottom: -14vw;
+      background: radial-gradient(circle, rgba(141,124,255,.34), transparent 66%);
+      animation-duration: 23s;
+    }
+
+    .sparkles::before,
+    .sparkles::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,.85) 0 1px, transparent 1.4px),
+        radial-gradient(circle at 80% 20%, rgba(255,214,143,.65) 0 1px, transparent 1.6px),
+        radial-gradient(circle at 60% 70%, rgba(140,246,255,.65) 0 1px, transparent 1.6px),
+        radial-gradient(circle at 30% 85%, rgba(255,111,174,.8) 0 1px, transparent 1.7px);
+      background-size: 280px 280px, 320px 320px, 360px 360px, 300px 300px;
+      animation: twinkle 12s linear infinite;
+      opacity: .55;
+    }
+
+    .sparkles::after {
+      animation-duration: 18s;
+      opacity: .28;
+      transform: scale(1.1);
+    }
+
+    .floating-hearts span {
+      position: absolute;
+      bottom: -10vh;
+      font-size: clamp(1rem, 1.2vw, 1.4rem);
+      color: rgba(255,255,255,.22);
+      animation: rise linear infinite;
+      text-shadow: 0 0 16px rgba(255,111,174,.25);
+    }
+
+    .frame {
+      position: fixed;
+      inset: 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 30px;
+      pointer-events: none;
+      z-index: 20;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.03);
+    }
+
+    .shell {
+      position: relative;
+      width: 100%;
+      height: calc(var(--vh) * 100);
+      overflow: hidden;
+    }
+
+    .slider-container {
+      display: flex;
+      width: 100%;
+      height: calc(var(--vh) * 100);
+      transition: transform 850ms cubic-bezier(.22, 1, .36, 1);
+      will-change: transform;
+    }
+
+    .slide {
+      position: relative;
+      min-width: 100vw;
+      width: 100vw;
+      height: calc(var(--vh) * 100);
+      padding:
+        calc(96px + var(--safe-top))
+        clamp(22px, 4vw, 72px)
+        calc(92px + var(--safe-bottom));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .slide-scroll {
+      width: min(1180px, 100%);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      position: relative;
+      z-index: 2;
+      padding: 2px;
+    }
+
+    .slide-scroll::-webkit-scrollbar { display: none; }
+
+    .decor,
+    .slide-decor {
+      position: absolute;
+      width: min(280px, 58vw);
+      height: min(280px, 58vw);
+      border-radius: 50%;
+      filter: blur(14px);
+      opacity: .35;
+      z-index: 0;
+      pointer-events: none;
+      animation: pulseGlow 7s ease-in-out infinite;
+    }
+
+    .slide:nth-child(odd) .decor,
+    .slide:nth-child(odd) .slide-decor {
+      top: 10%;
+      right: 4%;
+      background: radial-gradient(circle, rgba(255,111,174,.22), transparent 68%);
+    }
+
+    .slide:nth-child(even) .decor,
+    .slide:nth-child(even) .slide-decor {
+      bottom: 8%;
+      left: 2%;
+      background: radial-gradient(circle, rgba(141,124,255,.24), transparent 68%);
+    }
+
+    .cover-card,
+    .admiration-card,
+    .timeline-card,
+    .love-card,
+    .photo-card,
+    .nav-btn,
+    .music-chip,
+    .love-pill,
+    .memory-pill,
+    .dots,
+    .top-bar,
+    .music-btn {
+      background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.08));
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: var(--shadow-lg);
+      backdrop-filter: blur(22px) saturate(1.18);
+      -webkit-backdrop-filter: blur(22px) saturate(1.18);
+    }
+
+    .animate,
+    .animate-up {
+      opacity: 0;
+      transform: translateY(34px) scale(.985);
+      transition: opacity 820ms ease, transform 820ms ease;
+    }
+
+    .slide.active .animate,
+    .slide.active .animate-up {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      max-width: 100%;
+      padding: .68rem .95rem;
+      margin-bottom: var(--space-5);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: .20em;
+      line-height: 1.25;
+      text-align: center;
+      color: var(--color-gold);
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+
+    .eyebrow::before {
+      content: "✦";
+      flex: 0 0 auto;
+      font-size: .8em;
+      color: var(--color-primary);
+    }
+
+    .mini-stars {
+      display: flex;
+      justify-content: center;
+      gap: .6rem;
+      margin-bottom: var(--space-5);
+      color: rgba(255,255,255,.76);
+      font-size: .9rem;
+      letter-spacing: .12em;
+    }
+
+    .cover-card {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      padding: clamp(1.75rem, 5vw, 4.4rem);
+      border-radius: 34px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover-card::before,
+    .cover-card::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .cover-card::before {
+      width: 260px;
+      height: 260px;
+      top: -110px;
+      left: -80px;
+      background: radial-gradient(circle, rgba(255,214,143,.22), transparent 70%);
+    }
+
+    .cover-card::after {
+      width: 320px;
+      height: 320px;
+      bottom: -150px;
+      right: -100px;
+      background: radial-gradient(circle, rgba(255,111,174,.18), transparent 68%);
+    }
+
+    .cover-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cover-card h1 {
+      font-size: var(--text-hero);
+      letter-spacing: -.035em;
+      margin-bottom: var(--space-5);
+    }
+
+    .gradient-name,
+    .shine {
+      background: linear-gradient(135deg, #ffffff 5%, #ffd6ec 32%, #ffd68f 72%, #ffffff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 22px rgba(255,214,143,.12);
+    }
+
+    .subtitle {
+      margin: 0 auto;
+      max-width: 760px;
+      font-size: clamp(1rem, .92rem + .6vw, 1.24rem);
+      line-height: 1.68;
+    }
+
+    .cover-actions {
+      margin-top: var(--space-8);
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+
+    .love-pill,
+    .music-chip,
+    .memory-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .65rem;
+      min-height: 48px;
+      padding: .88rem 1.16rem;
+      border-radius: var(--radius-full);
+      color: var(--color-text);
+      font-size: var(--text-sm);
+      text-align: center;
+    }
+
+    .scroll-invite {
+      margin-top: var(--space-8);
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2);
+      color: var(--color-text-faint);
+      font-size: var(--text-xs);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .scroll-invite span:last-child {
+      width: 1px;
+      height: 42px;
+      background: linear-gradient(180deg, rgba(255,255,255,.7), transparent);
+      animation: dropLine 1.8s ease-in-out infinite;
+    }
+
+    .two-col,
+    .two-column,
+    .final-layout {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(285px, .95fr) minmax(330px, 1fr);
+      gap: clamp(1.35rem, 4vw, 4rem);
+      align-items: center;
+      justify-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .two-col.reverse,
+    .two-column.reverse,
+    .final-layout.reverse {
+      grid-template-columns: minmax(330px, 1fr) minmax(285px, .95fr);
+    }
+
+    .photo-card {
+      width: min(100%, 470px);
+      margin: 0 auto;
+      padding: 14px 14px 58px;
+      border-radius: 30px;
+      position: relative;
+      overflow: hidden;
+      align-self: center;
+      justify-self: center;
+    }
+
+    .photo-card::before {
+      content: "";
+      position: absolute;
+      inset: 10px 10px 56px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.14);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .photo-card::after {
+      content: "";
+      position: absolute;
+      right: -10%;
+      bottom: -15%;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(255,214,143,.18), transparent 68%);
+      filter: blur(10px);
+      pointer-events: none;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: clamp(290px, 43vh, 440px);
+      object-fit: cover;
+      object-position: center;
+      border-radius: 22px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.18);
+      background: rgba(255,255,255,.08);
+    }
+
+    .photo-caption {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 16px;
+      min-height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-3);
+      color: rgba(255,255,255,.86);
+      font-size: var(--text-sm);
+      z-index: 2;
+    }
+
+    .photo-caption strong {
+      min-width: max-content;
+      font-family: var(--font-display);
+      font-size: 1.28rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .caption-tag {
+      max-width: 58%;
+      padding: .42rem .74rem;
+      border-radius: var(--radius-full);
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.12);
+      font-size: var(--text-xs);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .text-block {
+      width: 100%;
+      max-width: 590px;
+      padding: clamp(.25rem, 1vw, 1rem);
+      align-self: center;
+      justify-self: center;
+    }
+
+    .text-block h2 {
+      font-size: var(--text-title);
+      letter-spacing: -.02em;
+      margin-bottom: var(--space-5);
+    }
+
+    .text-block p + p { margin-top: var(--space-4); }
+
+    .soft-note {
+      margin-top: var(--space-6);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem;
+      max-width: 100%;
+      padding: .86rem 1.04rem;
+      border-radius: 24px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.11);
+      color: var(--color-text);
+      font-size: var(--text-sm);
+      line-height: 1.45;
+    }
+
+    .soft-note::before {
+      content: "❤";
+      flex: 0 0 auto;
+      color: var(--color-primary);
+    }
+
+    .timeline-card,
+    .love-card,
+    .admiration-card {
+      width: min(1080px, 100%);
+      margin: 0 auto;
+      padding: clamp(1.45rem, 4vw, 3rem);
+      border-radius: 32px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 790px;
+      margin: 0 auto var(--space-8);
+    }
+
+    .timeline-card .section-head,
+    .love-card .section-head {
+      margin-bottom: 0;
+    }
+
+    .section-head p,
+    .timeline-card p {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2.05rem, 1.45rem + 2.5vw, 4rem);
+      margin-bottom: var(--space-4);
+    }
+
+    .qualities,
+    .vows-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-4);
+      align-items: stretch;
+    }
+
+    .quality,
+    .vow {
+      min-height: 100%;
+      padding: 1.25rem;
+      border-radius: 23px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.11);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quality::before,
+    .vow::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255,255,255,.46), transparent 70%);
+    }
+
+    .timeline-number,
+    .quality span {
+      width: 40px;
+      height: 40px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(255,111,174,.24), rgba(255,214,143,.26));
+      border: 1px solid rgba(255,255,255,.16);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin-bottom: var(--space-4);
+      box-shadow: 0 10px 28px rgba(255,111,174,.12);
+    }
+
+    .quality h3,
+    .vow h3 {
+      font-size: clamp(1.28rem, 1rem + .9vw, 1.86rem);
+      margin-bottom: var(--space-3);
+    }
+
+    .quality p,
+    .vow p {
+      font-size: clamp(.85rem, .78rem + .22vw, .98rem);
+      line-height: 1.55;
+    }
+
+    .final-date {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .8rem;
+      margin: var(--space-5) auto var(--space-4);
+      padding: .78rem 1.08rem;
+      border-radius: var(--radius-full);
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.12);
+      color: var(--color-gold);
+      font-family: var(--font-display);
+      font-size: clamp(1.65rem, 1.2rem + 1.4vw, 2.8rem);
+      line-height: 1;
+      text-align: center;
+    }
+
+    .handwritten {
+      margin-top: var(--space-6);
+      font-family: var(--font-display);
+      font-size: clamp(1.55rem, 1.15rem + 1.6vw, 2.35rem);
+      line-height: 1.1;
+      color: #ffe7f3;
+      text-align: center;
+    }
+
+    .final-quote {
+      width: fit-content;
+      max-width: 100%;
+      margin: var(--space-5) auto 0;
+      padding-left: var(--space-4);
+      border-left: 2px solid rgba(255,214,143,.34);
+      color: rgba(255,255,255,.84);
+      font-size: var(--text-sm);
+      letter-spacing: .02em;
+      text-align: left;
+    }
+
+    .music-btn {
+      position: fixed;
+      left: 26px;
+      top: calc(26px + var(--safe-top));
+      z-index: 50;
+      padding: .84rem 1.08rem;
+      border-radius: var(--radius-full);
+      color: #fff;
+      cursor: pointer;
+      transition: transform var(--transition), background var(--transition), opacity var(--transition);
+    }
+
+    .music-btn:hover { transform: scale(1.04); background: rgba(255,255,255,.18); }
+    .music-btn:active { transform: scale(.98); }
+
+    .top-bar {
+      position: fixed;
+      top: calc(26px + var(--safe-top));
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 45;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-3);
+      width: fit-content;
+      max-width: calc(100vw - 220px);
+      padding: .78rem .96rem;
+      border-radius: var(--radius-full);
+      background: rgba(10,8,18,.24);
+    }
+
+    .progress-label {
+      font-size: var(--text-xs);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--color-text-faint);
+      white-space: nowrap;
+    }
+
+    .progress-line {
+      width: min(20vw, 165px);
+      height: 6px;
+      border-radius: var(--radius-full);
+      background: rgba(255,255,255,.09);
+      overflow: hidden;
+    }
+
+    .progress-line span {
+      display: block;
+      width: 16%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-gold));
+      transition: width 600ms cubic-bezier(.22, 1, .36, 1);
+      box-shadow: 0 0 18px rgba(255,111,174,.35);
+    }
+
+    .nav-btn {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      z-index: 48;
+      cursor: pointer;
+      background: rgba(255,255,255,.12);
+      transition: transform var(--transition), background var(--transition), opacity var(--transition);
+    }
+
+    .nav-btn:hover { transform: translateY(-50%) scale(1.06); background: rgba(255,255,255,.18); }
+    .nav-btn:active { transform: translateY(-50%) scale(.98); }
+    .nav-btn.hidden { opacity: 0; pointer-events: none; }
+    .prev-btn { left: 24px; }
+    .next-btn { right: 24px; }
+
+    .dots {
+      position: fixed;
+      left: 50%;
+      bottom: calc(24px + var(--safe-bottom));
+      transform: translateX(-50%);
+      z-index: 49;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .42rem;
+      padding: .72rem .92rem;
+      border-radius: var(--radius-full);
+      background: rgba(255,255,255,.12);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: var(--radius-full);
+      background: rgba(255,255,255,.28);
+      transition: width var(--transition), background var(--transition), transform var(--transition);
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .dot.active {
+      width: 28px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-gold));
+      transform: scale(1.04);
+    }
+
+    .hint,
+    .mobile-swipe {
+      position: fixed;
+      z-index: 44;
+      color: var(--color-text-faint);
+      font-size: var(--text-xs);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .hint { right: 28px; bottom: calc(30px + var(--safe-bottom)); }
+    .mobile-swipe { left: 28px; bottom: calc(30px + var(--safe-bottom)); display: none; }
+
+    .reveal-heart {
+      position: absolute;
+      top: 1.15rem;
+      right: 1.15rem;
+      z-index: 3;
+      font-size: 1.15rem;
+      color: rgba(255,255,255,.5);
+      animation: heartbeat 2.2s ease-in-out infinite;
+    }
+
+    .slide-counter {
+      position: absolute;
+      inset: auto auto 1.15rem 1.15rem;
+      padding: .5rem .75rem;
+      border-radius: var(--radius-full);
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.1);
+      color: var(--color-text-faint);
+      font-size: var(--text-xs);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    @keyframes drift {
+      from { transform: translate3d(0, 0, 0) scale(1); }
+      to { transform: translate3d(3vw, 2vh, 0) scale(1.08); }
+    }
+
+    @keyframes twinkle {
+      from { transform: translateY(0); }
+      to { transform: translateY(-12px); }
+    }
+
+    @keyframes rise {
+      from { transform: translate3d(0, 0, 0) scale(.9); opacity: 0; }
+      10% { opacity: 1; }
+      to { transform: translate3d(0, -120vh, 0) scale(1.15); opacity: 0; }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); opacity: .26; }
+      50% { transform: scale(1.08); opacity: .42; }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      18% { transform: scale(1.18); }
+      36% { transform: scale(.98); }
+      54% { transform: scale(1.12); }
+    }
+
+    @keyframes dropLine {
+      0%, 100% { transform: scaleY(.5); opacity: .45; }
+      50% { transform: scaleY(1); opacity: 1; }
+    }
+
+    @media (max-width: 980px) {
+      .slide {
+        padding:
+          calc(88px + var(--safe-top))
+          22px
+          calc(96px + var(--safe-bottom));
+      }
+
+      .top-bar {
+        top: calc(18px + var(--safe-top));
+        max-width: calc(100vw - 150px);
+      }
+
+      .progress-line { width: min(18vw, 120px); }
+
+      .two-col,
+      .two-col.reverse,
+      .two-column,
+      .two-column.reverse,
+      .final-layout,
+      .final-layout.reverse {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        align-content: center;
+        justify-items: center;
+      }
+
+      .two-col .photo-card,
+      .two-column .photo-card,
+      .final-layout .photo-card { order: 1; }
+
+      .two-col .text-block,
+      .two-column .text-block,
+      .final-layout .text-block { order: 2; }
+
+      .qualities,
+      .vows-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hint { display: none; }
+      .mobile-swipe { display: block; }
+    }
+
+    @media (max-width: 700px) {
+      :root {
+        --text-base: .88rem;
+      }
+
+      .frame {
+        inset: 8px;
+        border-radius: 22px;
+      }
+
+      .slide {
+        padding:
+          calc(74px + var(--safe-top))
+          16px
+          calc(96px + var(--safe-bottom));
+      }
+
+      .slide-scroll {
+        align-items: center;
+      }
+
+      .cover-card,
+      .timeline-card,
+      .love-card,
+      .admiration-card {
+        width: min(100%, 420px);
+        padding: 1.15rem 1rem;
+        border-radius: 24px;
+      }
+
+      .cover-card h1 {
+        font-size: clamp(2.75rem, 13vw, 4.25rem);
+        margin-bottom: .9rem;
+      }
+
+      .subtitle {
+        font-size: .92rem;
+        line-height: 1.52;
+      }
+
+      .mini-stars,
+      .eyebrow {
+        margin-bottom: .85rem;
+      }
+
+      .eyebrow {
+        width: fit-content;
+        max-width: 100%;
+        padding: .6rem .76rem;
+        font-size: .66rem;
+        letter-spacing: .13em;
+      }
+
+      .cover-actions {
+        margin-top: 1rem;
+        gap: .65rem;
+      }
+
+      .love-pill,
+      .music-chip,
+      .memory-pill {
+        width: 100%;
+        min-height: 42px;
+        padding: .72rem .85rem;
+        font-size: .78rem;
+        border-radius: 18px;
+      }
+
+      .scroll-invite { display: none; }
+
+      .two-col,
+      .two-column,
+      .final-layout {
+        width: min(100%, 420px);
+        gap: .9rem;
+      }
+
+      .photo-card {
+        width: min(100%, 350px);
+        padding: 9px 9px 42px;
+        border-radius: 21px;
+      }
+
+      .photo-card::before {
+        inset: 8px 8px 41px;
+        border-radius: 15px;
+      }
+
+      .photo-card img {
+        height: clamp(172px, 26svh, 230px);
+        min-height: 0;
+        border-radius: 15px;
+      }
+
+      .photo-caption {
+        left: 14px;
+        right: 14px;
+        bottom: 10px;
+        min-height: 28px;
+        gap: .45rem;
+      }
+
+      .photo-caption strong {
+        font-size: 1.02rem;
+      }
+
+      .caption-tag {
+        max-width: 58%;
+        padding: .35rem .56rem;
+        font-size: .58rem;
+        letter-spacing: .06em;
+      }
+
+      .text-block {
+        max-width: 390px;
+        padding: 0 .1rem;
+        text-align: left;
+      }
+
+      .text-block h2 {
+        font-size: clamp(1.85rem, 7.8vw, 2.55rem);
+        margin-bottom: .7rem;
+      }
+
+      .text-block p + p { margin-top: .66rem; }
+
+      p {
+        font-size: .86rem;
+        line-height: 1.45;
+      }
+
+      .soft-note {
+        margin-top: .78rem;
+        padding: .7rem .85rem;
+        border-radius: 18px;
+        font-size: .75rem;
+        line-height: 1.36;
+      }
+
+      .section-head {
+        margin-bottom: .85rem;
+      }
+
+      .section-head h2 {
+        font-size: clamp(2rem, 8.6vw, 2.75rem);
+        margin-bottom: .72rem;
+      }
+
+      .section-head p {
+        font-size: .86rem;
+        line-height: 1.45;
+      }
+
+      .qualities {
+        gap: .72rem;
+      }
+
+      .quality,
+      .vow {
+        padding: .88rem;
+        border-radius: 17px;
+      }
+
+      .quality span {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+        margin-bottom: .55rem;
+      }
+
+      .quality h3,
+      .vow h3 {
+        font-size: 1.03rem;
+        margin-bottom: .4rem;
+      }
+
+      .quality p,
+      .vow p {
+        font-size: .76rem;
+        line-height: 1.36;
+      }
+
+      .final-date {
+        font-size: clamp(1.25rem, 6vw, 1.75rem);
+        padding: .68rem .85rem;
+        margin: .85rem auto .8rem;
+      }
+
+      .handwritten {
+        font-size: clamp(1.25rem, 5.8vw, 1.65rem);
+        margin-top: 1rem;
+      }
+
+      .final-quote {
+        font-size: .82rem;
+        margin-top: .78rem;
+      }
+
+      .music-btn {
+        left: 12px;
+        top: calc(10px + var(--safe-top));
+        padding: .64rem .8rem;
+        font-size: .76rem;
+        max-width: 126px;
+      }
+
+      .top-bar {
+        top: calc(10px + var(--safe-top));
+        max-width: calc(100vw - 150px);
+        padding: .55rem .66rem;
+        gap: .5rem;
+      }
+
+      .progress-label {
+        font-size: .58rem;
+        letter-spacing: .10em;
+      }
+
+      .progress-line { width: 62px; height: 5px; }
+
+      .nav-btn {
+        top: auto;
+        bottom: calc(15px + var(--safe-bottom));
+        transform: none;
+        width: 46px;
+        height: 46px;
+      }
+
+      .nav-btn:hover { transform: scale(1.03); }
+      .nav-btn:active { transform: scale(.97); }
+      .prev-btn { left: 16px; }
+      .next-btn { right: 16px; }
+
+      .dots {
+        bottom: calc(18px + var(--safe-bottom));
+        padding: .62rem .76rem;
+        gap: .32rem;
+      }
+
+      .dot { width: 7px; height: 7px; }
+      .dot.active { width: 21px; }
+
+      .mobile-swipe {
+        display: none;
+      }
+    }
+
+    @media (max-width: 700px) and (max-height: 760px) {
+      .slide {
+        padding-top: calc(66px + var(--safe-top));
+        padding-bottom: calc(86px + var(--safe-bottom));
+      }
+
+      .cover-card,
+      .timeline-card,
+      .love-card,
+      .admiration-card {
+        padding: 1rem .92rem;
+      }
+
+      .photo-card img {
+        height: clamp(148px, 23svh, 190px);
+      }
+
+      .text-block h2 {
+        font-size: clamp(1.7rem, 7vw, 2.28rem);
+      }
+
+      p {
+        font-size: .8rem;
+        line-height: 1.38;
+      }
+
+      .quality p,
+      .vow p {
+        font-size: .72rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .slide {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      .cover-card h1 {
+        font-size: clamp(2.45rem, 13vw, 3.8rem);
+      }
+
+      .top-bar {
+        display: none;
+      }
+
+      .music-btn {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .music-btn:hover { transform: translateX(-50%) scale(1.03); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="bg-orbs"></div>
+  <div class="sparkles"></div>
+
+  <div class="floating-hearts" aria-hidden="true">
+    <span style="left:6%; animation-duration:18s; animation-delay:-3s;">❤</span>
+    <span style="left:14%; animation-duration:21s; animation-delay:-7s; font-size:1.4rem;">♡</span>
+    <span style="left:28%; animation-duration:17s; animation-delay:-11s;">❤</span>
+    <span style="left:42%; animation-duration:23s; animation-delay:-4s; font-size:1.6rem;">♡</span>
+    <span style="left:57%; animation-duration:19s; animation-delay:-9s;">❤</span>
+    <span style="left:72%; animation-duration:24s; animation-delay:-6s; font-size:1.55rem;">♡</span>
+    <span style="left:86%; animation-duration:20s; animation-delay:-12s;">❤</span>
+  </div>
+
+  <div class="frame"></div>
+  
+  <audio id="bgMusic" loop preload="auto">
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-btn" type="button" id="playMusicBtn" aria-label="Tocar música de fundo">
+    Tocar música
+  </button>
+
+  <div class="top-bar" aria-hidden="true">
+    <span class="progress-label">Nossa história</span>
+    <div class="progress-line"><span id="progressFill"></span></div>
+    <span class="progress-label" id="progressText">01 / 07</span>
+  </div>
+
+  <button class="nav-btn prev-btn hidden" type="button" onclick="moveSlide(-1)" aria-label="Slide anterior">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+  </button>
+  <button class="nav-btn next-btn" type="button" onclick="moveSlide(1)" aria-label="Próximo slide">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+  </button>
+
+  <div class="dots" id="dotsContainer"></div>
+  <div class="hint">Use as setas para navegar</div>
+  <div class="mobile-swipe">Deslize para ver mais</div>
+
+  <main class="shell">
+    <div class="slider-container" id="slider">
+      
+      <section class="slide active" aria-label="Capa da homenagem">
+        <div class="decor"></div>
+        <div class="slide-scroll">
+          <div class="card cover-card animate">
+            <div class="mini-stars">✦ ✦ ✦</div>
+            <div class="eyebrow">Feito por Igor para a Princesa mais linda do mundo</div>
+            <h1>Minha vida tem mais sentido <span class="gradient-name">com você.</span></h1>
+            <p class="subtitle">
+              Eu queria te entregar algo bonito, mas não só bonito de aparência. Queria que cada tela tivesse um pedaço real da nossa história: a distância entre SP e PG, os nossos planos, as nossas memórias e esse amor que a gente constrói todos os dias.
+            </p>
+            <div class="cover-actions">
+              <div class="memory-pill">♡ Feliz Dia dos Namorados</div>
+              <div class="memory-pill">De seu Príncipe, para a mulher da minha vida</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" aria-label="Entre São Paulo e Praia Grande">
+        <div class="decor"></div>
+        <div class="slide-scroll">
+          <div class="two-col reverse animate">
+            <div class="text-block">
+              <div class="eyebrow">O nosso caminho</div>
+              <h2>Entre São Paulo e Praia Grande, <span class="shine">eu sempre volto para você.</span></h2>
+              <p>
+                Hoje você está em São Paulo e eu estou na Praia Grande. Por muitas vezes a distância aparece no caminho, na saudade, nos horários e nos planos que precisam esperar um pouco mais.
+              </p>
+              <p>
+                Mas tem uma coisa que nunca fica distante: a certeza que eu tenho de nós. Porque mesmo em cidades diferentes, você continua sendo meu lugar favorito, minha paz e o destino que eu escolho todos os dias.
+              </p>
+              <div class="soft-note">A nossa história começou antes de qualquer plano. Começou na escolha de ficar. Começou em 2018, quando você deixou sua semente de amor no meu coração.</div>
+            </div>
+            <figure class="photo-card">
+              <span class="reveal-heart">❤</span>
+              <img src="img/princesa.jpg" data-srcs="img/princesa.jpg|img/Princesa.jpg|img/giullie.jpg|img/Giullie.jpg|img/casal.jpg|img/Casal.jpg|princesa.jpg|giullie.jpg|casal.jpg" alt="Giullie Anne e Igor" loading="lazy" />
+              <figcaption class="photo-caption"><strong>Nós dois</strong><span class="caption-tag">SP ↔ PG</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" aria-label="Capítulo Holambra">
+        <div class="decor"></div>
+        <div class="slide-scroll">
+          <div class="two-col animate">
+            <figure class="photo-card">
+              <span class="reveal-heart">❤</span>
+              <img src="img/holambra.jpg" data-srcs="img/holambra.jpg|img/Holambra.jpg|img/holambra.jpeg|img/Holambra.jpeg|img/holambra.JPG|img/Holambra.JPG|img/holambra.png|img/Holambra.png|holambra.jpg|Holambra.jpg" alt="Momentos em Holambra" loading="lazy" />
+              <figcaption class="photo-caption"><strong>Holambra</strong><span class="caption-tag">Onde tudo floresceu</span></figcaption>
+            </figure>
+            <div class="text-block">
+              <div class="eyebrow">Capítulo 01</div>
+              <h2>No meio das flores, <span class="shine">eu só via você.</span></h2>
+              <p>
+                Holambra já era linda, mas naquele dia eu entendi que nenhum lugar fica realmente bonito só pela paisagem. Ele fica bonito pela pessoa que está com a gente.
+              </p>
+              <p>
+                E com você é assim: tudo ganha outro brilho. Um passeio vira lembrança, uma foto vira saudade boa, um momento simples vira algo que eu guardo com carinho no coração.
+              </p>
+              <div class="soft-note">Você floresce e ilumina os lugares por onde passa.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" aria-label="Capítulo Itanhaém">
+        <div class="decor"></div>
+        <div class="slide-scroll">
+          <div class="two-col reverse animate">
+            <div class="text-block">
+              <div class="eyebrow">Capítulo 02</div>
+              <h2>Tem memória que vira <span class="shine">refúgio.</span></h2>
+              <p>
+                Com você por perto, todos os lugares se tornam um daqueles lugares que ficam marcados porque carregam uma sensação boa: a de estar com você, respirando um pouco mais leve, vivendo sem pressa.
+              </p>
+              <p>
+                Perto do mar, nas pedras, eu senti de novo o que sinto quando você está comigo: calma. Você tem esse dom de fazer o mundo parecer menos pesado e a vida parecer muito mais bonita.
+              </p>
+              <div class="soft-note">Não era endereço. Era lembrança. E era nossa.</div>
+            </div>
+            <figure class="photo-card">
+              <span class="reveal-heart">♡</span>
+              <img src="img/itanhaem.jpg" data-srcs="img/itanhaem.jpg|img/Itanhaem.jpg|img/itanhaém.jpg|img/Itanhaém.jpg|img/itanhaem.jpeg|img/Itanhaem.jpeg|img/itanhaem.JPG|img/Itanhaem.JPG|itanhaem.jpg|Itanhaem.jpg" alt="Nós em Itanhaém" loading="lazy" />
+              <figcaption class="photo-caption"><strong>Itanhaém</strong><span class="caption-tag">Nosso respiro</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" aria-label="O que admiro em você">
+        <div class="slide-decor"></div>
+        <div class="admiration-card animate-up delay-1">
+          <div class="section-head">
+            <h2>Por que eu te escolho todos os dias</h2>
+            <p>Não é só pela sua beleza radiante, mas pela imensidão da alma que você carrega.</p>
+          </div>
+          <div class="qualities">
+            <div class="quality">
+              <span>✦</span>
+              <h3>Seu dom de cuidar</h3>
+              <p>A sua vocação para a pedagogia não é por acaso. A paciência, o amor e o cuidado que você dedica a ensinar e guiar mostram o coração gigante que você tem.</p>
+            </div>
+            <div class="quality">
+              <span>✧</span>
+              <h3>A nossa parceria</h3>
+              <p>Seja desvendando um código no computador, mexendo no carro ou apenas dividindo uma pizza e um café num fim de tarde em Praia Grande, tudo com você é especial.</p>
+            </div>
+            <div class="quality">
+              <span>✦</span>
+              <h3>A sua luz</h3>
+              <p>Você ilumina os meus dias. Mesmo quando as coisas estão difíceis, saber que tenho você como meu amor e melhor amiga me dá todas as forças que eu preciso.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" aria-label="Nosso futuro">
+        <div class="slide-decor"></div>
+        <div class="timeline-card animate-up delay-1">
+          <div class="section-head">
+            <h2>O nosso maior capítulo ainda está sendo escrito</h2>
+            <p>Sem pressa, sem precisar explicar tudo para o mundo. Tem coisa que é tão nossa, tão bonita e tão especial, que merece ficar guardada só no coração.</p>
+          </div>
+          <div style="text-align: center;">
+            <div class="final-date">Nosso futuro</div>
+            <p style="margin: 0 auto; max-width: 52ch;">Eu amo saber que, mesmo vivendo em cidades diferentes, a gente continua se escolhendo todos os dias. A distância entre nós pode fazer parte da nossa rotina, mas nunca foram maiores do que o que a gente sente.</p>
+            <p style="margin: 1rem auto 0; max-width: 52ch;">O mais bonito é perceber que o nosso amor não depende de pressa, de distância ou de explicação. Ele acontece nos detalhes, nas conversas, na saudade, nos encontros e nessa vontade sincera de viver muitos capítulos lado a lado.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" aria-label="Declaração Final">
+        <div class="slide-decor"></div>
+        <div class="love-card animate-up delay-1">
+          <div class="section-head">
+            <h2>Feliz Dia dos Namorados, meu amor!</h2>
+            <p>Que este seja apenas mais um de todos os dias dos namorados que passaremos lado a lado.</p>
+            <div class="handwritten">Eu te amo MUITÃOZÃO.</div>
+            <div class="final-quote">
+              "Para sempre, o seu Príncipe."
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+
+    // Altura real da tela no celular/iPhone, evitando desalinhamento com a barra do navegador
+    function setRealViewportHeight() {
+      document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+    }
+    setRealViewportHeight();
+    window.addEventListener('resize', setRealViewportHeight);
+    window.addEventListener('orientationchange', () => setTimeout(setRealViewportHeight, 250));
+
+    // Tenta variações de nome das imagens para evitar foto quebrada no deploy
+    document.querySelectorAll('img[data-srcs]').forEach((img) => {
+      const sources = img.dataset.srcs.split('|').map(src => src.trim()).filter(Boolean);
+      let index = Math.max(0, sources.indexOf(img.getAttribute('src')));
+      img.addEventListener('error', () => {
+        index += 1;
+        if (index < sources.length) img.src = sources[index];
+      });
+    });
+
+    // Configurações do Slider
+    const slider = document.getElementById('slider');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const progressFill = document.getElementById('progressFill');
+    const progressText = document.getElementById('progressText');
+    const dotsContainer = document.getElementById('dotsContainer');
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+
+    // Criar os pontos indicadores (dots)
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `Ir para o slide ${i + 1}`);
+      dot.onclick = () => goToSlide(i);
+      dotsContainer.appendChild(dot);
+    }
+    const dots = document.querySelectorAll('.dot');
+
+    function updateNavigation() {
+      // Atualiza Posição do Slider
+      slider.style.transform = `translateX(-${currentSlide * 100}vw)`;
+      
+      // Atualiza Textos e Barra
+      progressText.innerText = `0${currentSlide + 1} / 0${totalSlides}`;
+      progressFill.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+      
+      // Atualiza Botões
+      prevBtn.classList.toggle('hidden', currentSlide === 0);
+      nextBtn.classList.toggle('hidden', currentSlide === totalSlides - 1);
+      
+      // Atualiza Dots
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+
+      // Dispara a animação dos elementos dentro do slide ativo
+      slides.forEach((slide, index) => {
+        if (index === currentSlide) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    function moveSlide(direction) {
+      currentSlide = Math.max(0, Math.min(totalSlides - 1, currentSlide + direction));
+      updateNavigation();
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateNavigation();
+    }
+
+    // Suporte a Swipe para Mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    slider.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+
+    slider.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, {passive: true});
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      if (touchEndX < touchStartX - swipeThreshold) {
+        moveSlide(1); // Swipe Esquerda
+      }
+      if (touchEndX > touchStartX + swipeThreshold) {
+        moveSlide(-1); // Swipe Direita
+      }
+    }
+
+    // Suporte ao Teclado
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') moveSlide(1);
+      if (e.key === 'ArrowLeft') moveSlide(-1);
+    });
+
+    // Código do Áudio MP3 (Atualizado)
+    const bgMusic = document.getElementById('bgMusic');
+    const playMusicBtn = document.getElementById('playMusicBtn');
+    let musicStarted = false;
+
+    async function startMusic() {
+      if (musicStarted) return;
+      musicStarted = true;
+      try {
+        await bgMusic.play();
+        playMusicBtn.textContent = 'Música tocando';
+        playMusicBtn.style.opacity = '0.72';
+      } catch (e) {
+        musicStarted = false;
+        playMusicBtn.textContent = 'Toque para ouvir';
+      }
+    }
+
+    playMusicBtn.addEventListener('click', startMusic);
+    document.addEventListener('click', startMusic, { once: true });
+    document.addEventListener('touchstart', startMusic, { once: true, passive: true });
+
+    // Observer para animar elementos quando entram na tela
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+      });
+    }, { threshold: 0.45 });
+
+    slides.forEach(slide => observer.observe(slide));
+
+    // Corrige posicionamento no redimensionamento da janela
+    window.addEventListener('resize', () => {
+      requestAnimationFrame(() => {
+        slider.style.transform = `translateX(-${currentSlide * 100}vw)`;
+      });
+    });
+
+    // Inicializa
+    updateNavigation();
+  </script>
+</body>
+</html>
